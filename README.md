@@ -109,15 +109,17 @@ graph TD
 ## 4. ディレクトリ構造
 
 ```
-.
-├── docker-compose.yml  # Dockerアプリケーション全体の設計図
-├── mosquitto/          # MQTTブローカー用の設定・データフォルダ
-│   └── config/
-│       └── mosquitto.conf
-├── recorder/           # 録画コンテナの関連ファイル
-│   ├── Dockerfile      # 録画コンテナの作り方を定義する設計図
-│   └── recorder.sh     # 実際の録画とアップロード作業を行うスクリプト
-└── README.md           # このファイル
+future-lab/
+├── .git/
+├── README.md
+└── server-environment/  <-- ★ここにサーバー環境をまとめる
+    ├── docker-compose.yml
+    ├── mosquitto/
+    │   └── config/
+    │       └── mosquitto.conf
+    └── recorder/
+        ├── Dockerfile
+        └── recorder.sh
 ```
 
 ## 5. 機能要件
